@@ -1,4 +1,11 @@
 body{font-family: 'Signika', sans-serif;text-align: center;width:90%;margin:0 auto;}
+header{border-bottom:1px solid black;}
+article{border-left:3px solid black;}
+form{text-align:left;}
+
+/* Form styling */
+
+
 main{text-align: left;}
 @media (min-width: 768px;) {
   body{width:80%;margin:0 auto;}
