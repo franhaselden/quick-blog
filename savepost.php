@@ -6,8 +6,8 @@ $date = htmlspecialchars($_POST["publishdate"]);
 $content = htmlspecialchars($_POST["postcontent"]);
 
 // Generates the post HTML file
-$postHTML = '<h2>'. $title .'</h2>
-			<h3>'. $date .'</h3>
+$postHTML = '<h2 class="post-title">'. $title .'</h2>
+			<h3 class="publish-date">'. $date .'</h3>
 			<p class="content">'. $content .'</p>';
 
 // Makes the title a suitable filename 

@@ -8,7 +8,7 @@
 				// Pops every post found into article tags and outputs
 				foreach ($posts as $post){
 					$post = "posts/" . $post;
-					echo "<article>";
+					echo "<article class='post'>";
 					include $post;
 					echo "</article>";
 				}
