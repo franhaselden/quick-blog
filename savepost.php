@@ -14,6 +14,7 @@ $postHTML = '<h2>'. $title .'</h2>
 $title = clean($title);
 $postfilename = "posts/post-" . $title . ".html";
 $postfile = fopen("posts/post-" . $title . ".html", "w");
+file_put_contents($postfilename, $postHTML);
 
 function clean($string) {
    $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
