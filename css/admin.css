@@ -1,6 +1,6 @@
 /* Layout and Default themeing for the admin page */
 
-/* Want to add your own theme instead? just add the path to it here and uncomment: @import 'mytheme.css'; */
+/* Want to add your own admin theme instead? Just add the path to it here and uncomment: @import 'mytheme.css'; */
 
 
 body{background-color:#f2f2f2}
@@ -71,5 +71,11 @@ body{background-color:#f2f2f2}
 /* Site settings widget */
 .admin .admintitle span{margin-left:30px;font-size:16px;font-weight:300;}
 
+
+/* Form settings */
+input .button{
+	background-color:#39a2f3;
+
+}
 
 }
