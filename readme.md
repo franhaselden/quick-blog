@@ -7,7 +7,7 @@ BlogCube uses very lightweight code to create a super-simple no-database bloggin
 ###How does it work?
 BlogCube stores each blog post as a simple HTML file on your server. The home/main page of your blog will quite simply grab all of the post files and display them in date order for you. Because it's so lightweight and simple, it's very easy to upgrade and change to suit you.
 
-###What's Included?
+###What's included?
 Included is everything you need to get blogging. Just follow the guide below and get started. You can edit the index.php page to suit you, and add your own CSS files to the header to completely change the way it looks. Just as long as you keep the main PHP loop and AJAX loading div intact, you can effectively pick it up and go. 
 
 BlogCube comes with a basic but nice-looking theme so you can use the blog instantly. Just plug in your own CSS if you fancy it.
