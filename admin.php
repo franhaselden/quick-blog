@@ -3,9 +3,10 @@
 		<aside>
 				<h1><span>Blog</span>Cube <i class="fa fa-cube"></i></h1>
 					<a id="newpost" onclick="loadpage('newpost','pageload')"><i class="fa fa-plus"></i>Add new post</a><br />
-					<a id="getlink" href=""><i class="fa fa-chain"></i>Get a post link</a><br />
-					<a id="addpic" href=""><i class="fa fa-photo"></i>Add to picture library</a><br />
-					<a id="tags" href=""><i class="fa fa-tags"></i>Create new post tags</a><br />
+					<a id="getlink" onclick="loadpage('getlink','pageload')"><i class="fa fa-chain"></i>Get a post link</a><br />
+					<a id="image-upload" onclick="loadpage('image-upload','pageload')"><i class="fa fa-photo"></i>Add to picture library</a><br />
+          <a id="image-library" onclick="loadpage('image-library','pageload')"><i class="fa fa-paint-brush"></i>See picture library</a><br />
+					<a id="tags" onclick="loadpage('tags','pageload')"><i class="fa fa-tags"></i>Create new post tags</a><br />
 					<a href="index.php"><i class="fa fa-home"></i>See your blog</a><br />
 		</aside>
 		<section>
@@ -52,6 +53,7 @@ $('.selected').removeClass('selected');
 }
 
 function loadpage(filename,section){
+  $('.selected').removeClass('selected');
 	var xmlhttp;
 if (window.XMLHttpRequest)
   {// code for IE7+, Firefox, Chrome, Opera, Safari
