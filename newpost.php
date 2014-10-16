@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php include 'parts/html-header.php' ?>
 <form action="savepost.php" method="POST">
 <fieldset>
 	<legend>New Post</legend>
@@ -12,4 +12,4 @@
 	<input type="submit" value="Publish" />
 </fieldset>
 </form>
-<?php include 'footer.php' ?>
+<?php include 'parts/footer.php' ?>

@@ -1,0 +1,75 @@
+/* Layout and Default themeing for the admin page */
+
+/* Want to add your own theme instead? just add the path to it here and uncomment: @import 'mytheme.css'; */
+
+
+body{background-color:#f2f2f2}
+
+.admin aside{
+	display:inline-block;
+	width:20%;
+	background-color:#1a1e21;
+	color:#fff;
+	min-height:450px;
+	vertical-align: top;
+	position:fixed;
+}
+
+.admin section{
+	margin-left:24.2%;
+	display:inline-block;
+	width:75.5%;
+	vertical-align: top;
+}
+
+.admin aside h1{padding:5px 20px;}
+.admin aside a{
+	color:#acacac;
+	width:100%;
+	padding:10px 20px 12px 20px;
+	display:block;
+	text-decoration: none;
+}
+
+.admin aside a:hover{
+	color:#fff;
+	background-color:#70be96;
+}
+
+.admin h1{font-weight:300;}
+.admin h1 span{font-weight:300;}
+
+.admin section article{
+	width:100%;
+	background-color:#fff;
+	border-top:5px solid #39a2f3;
+	padding:0 20px 20px 20px;
+	display:inline-block;
+	margin:0 30px 30px 0;
+}
+
+/* Colour changy bits */
+.admin section article:nth-child(3n){
+	border-color: #fa576a;
+}
+.admin section article:nth-child(4n){
+	border-color: #6aafbe;
+}
+.admin section article:nth-child(5n){
+	border-color: #35556a;
+}
+.admin a{color:#395465}
+
+/* Post List Widget */
+.admin .postlist span{font-size:14px;margin-left:45px;}
+
+.admin td{border-bottom:1px solid #cdcdcd;}
+.admin td:first-child{width:500px;}
+.admin td:nth-child(2n){width:120px;}
+.admin td:nth-child(3n){width:120px;}
+
+/* Site settings widget */
+.admin .admintitle span{margin-left:30px;font-size:16px;font-weight:300;}
+
+
+}

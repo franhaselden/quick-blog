@@ -1,0 +1,25 @@
+/***************************/
+/** Mobile first approach **/
+/**         V.1.0         **/
+/***************************/
+
+/* Basic page styling */
+body{font-family: 'Lato', sans-serif;font-weight:300;width:90%;margin:0 auto;}
+h1, h2, h3, h4, h5, h6{font-weight:400;}
+
+/* Context Box styling */
+header{border-bottom:1px solid black;text-align: center;}
+
+/* Text and Icon styling */
+i{margin-right:10px;}
+
+
+/* Border box all the things for supersimple styling */
+
+*,
+*:before,
+*:after{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box}
