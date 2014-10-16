@@ -16,7 +16,7 @@ body{background-color:#f2f2f2}
 }
 
 .admin section{
-	margin-left:24.2%;
+	margin-left:27.2%;
 	display:inline-block;
 	width:75.5%;
 	vertical-align: top;
@@ -29,11 +29,16 @@ body{background-color:#f2f2f2}
 	padding:10px 20px 12px 20px;
 	display:block;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .admin aside a:hover{
 	color:#fff;
 	background-color:#70be96;
+}
+.admin aside a.selected{
+	background-color:#fc5573;
+	color:#fff;
 }
 
 .admin h1{font-weight:300;}
@@ -61,7 +66,7 @@ body{background-color:#f2f2f2}
 .admin a{color:#395465}
 
 /* Post List Widget */
-.admin .postlist span{font-size:14px;margin-left:45px;}
+.admin #postlist span{font-size:14px;margin-left:45px;}
 
 .admin td{border-bottom:1px solid #cdcdcd;}
 .admin td:first-child{width:500px;}
@@ -72,10 +77,34 @@ body{background-color:#f2f2f2}
 .admin .admintitle span{margin-left:30px;font-size:16px;font-weight:300;}
 
 
+/* Ajaxy bits */
+#back{margin-left:40px;font-size:16px;cursor: pointer;}
+
 /* Form settings */
-input .button{
+.admin form input.button{
 	background-color:#39a2f3;
-
+	padding:5px 20px;
+	color:#fff;
+	font-weight:400;
+	border:0;
+	font-size:18px;
+}
+.admin form input.button:hover{
+	background-color:#1866a3;}
+.admin form input,.admin form textarea{
+	width:100%;
+	border:1px solid #acacac;
+	padding:5px;
+	font-size:18px;
+	font-weight:500;
+	margin:12px 0 25px 0;
+}
+.admin form textarea{
+	height:400px;
 }
 
-}
+
+
+
+
+
