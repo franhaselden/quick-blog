@@ -12,9 +12,9 @@ $postHTML = '<h2 class="post-title">'. $title .'</h2>
 
 // Makes the title a suitable filename 
 $title = clean($title);
-$postfilename = "posts/post-" . $title . ".html";
-$postfile = fopen("posts/post-" . $title . ".html", "w");
-file_put_contents($postfilename, $postHTML);
+//$postfilename = "post-" . $title . ".html";
+$postfile = fopen("/../posts/post-" . $title . ".html", "w");
+//file_put_contents($postfilename, $postHTML);
 
 function clean($string) {
    $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.

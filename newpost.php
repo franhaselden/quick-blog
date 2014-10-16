@@ -1,4 +1,4 @@
-<form action="savepost.php" method="POST">
+<form action="functions/savepost.php" method="POST">
 <article>
 	<h3 class="admintitle">New Posts</h3>
 	<label>Post title</label><br />
