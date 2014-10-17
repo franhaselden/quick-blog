@@ -1,2 +1,4 @@
 Mobile Design Pattern: Inventory-Based Discrete Slider~mobile-design-pattern-inventory-based-discrete-slider~Friday 17 October 2014^
 Wayfinding For The Mobile Web~wayfinding-for-the-mobile-web~Friday 17 October 2014^
+An Example Item~an-example-item~Friday 17 October 2014^
+Test test test~test-test-test~Friday 17 October 2014^

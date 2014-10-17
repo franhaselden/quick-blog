@@ -1,20 +1,14 @@
 <?php
 // Gets and outputs the posts in a table on the admin page
 
-$masterpostlist = getPostList();
-var_dump($masterpostlist);
-echo '<br /><br />';
+$masterposts = "../posts/master-allposts.txt";
+$current = file_get_contents($masterposts);
+$masterpostlist = explode('^', $current);
 
-foreach ($masterpostlist as $post){
-	$postParts = explode('~',$post);
-	var_dump($postParts);
+foreach ($masterpostlist as &$post){
+    $post = explode('~',$post);
+    var_dump($post);
 }
 
-function getPostList(){
-	$masterposts = "../posts/master-allposts.txt";
-	$current = file_get_contents($masterposts);
-	$masterpostlist = explode('^', $current);
-	return $masterpostlist;
-}
 
 ?>
