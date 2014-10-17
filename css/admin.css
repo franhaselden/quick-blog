@@ -80,7 +80,7 @@ body{background-color:#f2f2f2}
 #back{margin-left:40px;font-size:16px;cursor: pointer;}
 
 /* Form settings */
-.admin form input.button{
+.admin form .button{
 	background-color:#39a2f3;
 	padding:5px 20px;
 	color:#fff;
@@ -88,7 +88,7 @@ body{background-color:#f2f2f2}
 	border:0;
 	font-size:18px;
 }
-.admin form input.button:hover{
+.admin form .button:hover{
 	background-color:#1866a3;}
 .admin form input,.admin form textarea{
 	width:100%;
@@ -100,6 +100,20 @@ body{background-color:#f2f2f2}
 }
 .admin form textarea{
 	height:400px;
+}
+.admin form .htmlHelper{
+	font-weight:500;
+	font-size:15px;
+	float:right;
+}
+.admin form .htmlHelper i{
+	font-size:18px;
+	font-weight: bold;
+	margin:0 0 0 10px;
+}
+.admin form .htmlHelper i:hover{
+	color:#1866a3;
+	cursor:pointer;
 }
 
 
