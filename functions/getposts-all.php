@@ -17,8 +17,8 @@ foreach ($masterpostlist as $inner) {
 }
 $masterpostlist = $new;
 usort($masterpostlist, "sortFunction");
+$rowcounter = 0;
 echo "<table border='0'><tbody>";
-$postcounter = 0;
 foreach ($masterpostlist as $post){ // One iteration per row
     echo '<tr>'; // Row STARTS here.
 
@@ -27,8 +27,6 @@ foreach ($masterpostlist as $post){ // One iteration per row
     echo "<td><span><a href='../posts/post-" . $post['filepath'] . ".html?edit=true'><i class='fa fa-pencil'></i>Edit</a></span></td>";
 
     echo '</tr>'; // Row ENDS here.
-    $postcounter++;
-    if($postcounter==6) break;
 }
 echo "</tbody></table>";
 

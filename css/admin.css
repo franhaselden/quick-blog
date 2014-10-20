@@ -66,11 +66,16 @@ body{background-color:#f2f2f2}
 
 /* Post List Widget */
 .admin #postlist span{font-size:14px;margin-left:45px;}
-
+.admin a{text-decoration: none;cursor: pointer;}
 .admin td{border-bottom:1px solid #cdcdcd;}
 .admin td:first-child{width:500px;}
 .admin td:nth-child(2n){width:120px;}
 .admin td:nth-child(3n){width:120px;}
+
+/* Post Links Widget */
+.admin table.allpostlinks td.postlink a{text-decoration: underline;}
+.admin table.allpostlinks td.postlink a:hover{color:#39a2f3;}
+.admin table.allpostlinks td.copy {text-align: center;}
 
 /* Site settings widget */
 .admin .admintitle span{margin-left:30px;font-size:16px;font-weight:300;}
