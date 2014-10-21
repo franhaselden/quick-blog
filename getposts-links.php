@@ -34,13 +34,7 @@
         $counter++;
         echo '<tr>';
         echo "<td><p>" . $post['title'] . "</p></td>";
-
         echo "<td class='postlink'><textarea id='textarea-'".$counter."'>".$link."</textarea><span></span></td>";
-
-        $copylink = '<td class="copy"><p id="copy-'.$counter.'" onclick="copyLink(\'textarea-'.$counter.'\',\'copy-'.$counter.'\')"><i class="fa fa-link"></i> Copy link</p></td>';
-        echo $copylink;
-
-
         echo '</tr>';
     }
     echo "</tbody></table>";

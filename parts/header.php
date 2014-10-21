@@ -1,5 +1,8 @@
 	<header>
-		<!--<h1>Francesca's Development Blog</h1>
-		<p>This blog is a space to share coding ideas, brain waffles and examples to leaf through later.</p>-->
-		<p>header stuff here</p>
+	<?php
+	$title = "settings/settings-sitename.html";$title = file_get_contents($title);
+	$sub = "settings/settings-sitesub.html";$sub = file_get_contents($sub);
+	?>
+		<h1><?php echo $title; ?></h1>
+		<p><?php echo $sub; ?></p>
 	</header>

@@ -22,7 +22,8 @@ body{background-color:#f2f2f2}
 }
 
 .admin aside h1{padding:5px 20px;}
-.admin aside a{
+.admin aside h1 a{color:#fff;}
+.admin aside a.sidebar{
 	color:#acacac;
 	width:100%;
 	padding:10px 20px 12px 20px;
@@ -31,11 +32,11 @@ body{background-color:#f2f2f2}
 	cursor: pointer;
 }
 
-.admin aside a:hover{
+.admin aside a.sidebar:hover{
 	color:#fff;
 	background-color:#70be96;
 }
-.admin aside a.selected{
+.admin aside a.sidebar.selected{
 	background-color:#fc5573;
 	color:#fff;
 }
@@ -75,14 +76,11 @@ body{background-color:#f2f2f2}
 /* Post Links Widget */
 .admin table.allpostlinks td.postlink a{text-decoration: underline;}
 .admin table.allpostlinks td.postlink a:hover{color:#39a2f3;}
+.admin td.postlink{width:300px;}
+.admin td.postlink textarea{width:95%;vertical-align: bottom;height:80%;margin:10% 0 5% 10%;}
 
 /* Site settings widget */
 .admin .admintitle span{margin-left:30px;font-size:16px;font-weight:300;}
-
-/* Get links widget */
-.admin .copy p{font-weight:300;cursor:pointer;font-size: 14px;text-align: left;}
-.admin .copy .copied{color:#39a2f3;}
-.admin .copy i{margin:0 10px;}
 
 /* Ajaxy bits */
 #back{margin-left:40px;font-size:16px;cursor: pointer;}
@@ -123,13 +121,6 @@ body{background-color:#f2f2f2}
 	color:#1866a3;
 	cursor:pointer;
 }
-
-/* Flash only loader */
-.noFlash{display:none;}
-.hasFlash{display:block;}
-
-
-
 
 
 
