@@ -25,8 +25,15 @@ file_put_contents($postfilename, $postHTML);
 $masterpostEntry = $date . "~" . $title . "~" . $filetitle;
 $file = "../posts/master-allposts.txt";
 $current = file_get_contents($file);
-$current .= $masterpostEntry . "^";
-file_put_contents($file, $current);
+$pos = strpos($current, $masterpostEntry);
+
+// Note our use of ===.  Simply == would not work as expected
+// because the position of 'a' was the 0th (first) character.
+if ($pos === false) {
+    // This entry was not found, continue
+    $current .= $masterpostEntry . "^";
+	file_put_contents($file, $current);
+}
 
 function clean($string) {
    $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
