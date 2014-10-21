@@ -15,6 +15,21 @@ function toggleHTMLHelper(){
     }
 }
 
+// This function allows users to copy the link from the text area on the link page
+function copyLink(textID,copyID){
+  // Adds to clipboard
+  var link = document.getElementById(copyID).value;
+
+  // Changes the "copy link" bit - visual feedback
+  document.getElementById(copyID).innerHTML = '<i class="fa fa-link"></i> Copied!';
+  $("#" + copyID).addClass("copied");
+  var delay = setTimeout(function(){
+        $("#" + copyID).removeClass("copied");
+         document.getElementById(copyID).innerHTML = '<i class="fa fa-link"></i> Copy link';
+     }, 1200)
+
+}
+
 // This function helps out with some HTML formatting while typing new posts
 function htmlHelper(){
 	$("#postcontent").keypress(function(e) {
@@ -73,4 +88,30 @@ xmlhttp.open("GET",filename + ".php",true);
 xmlhttp.send();
 $("#back").fadeIn("fast");
 $("#" + filename).addClass("selected");
+
+// Enables flash dependencies for getlink page only
+var hasFlash = isFlashEnabled();
+console.log(hasFlash);
+if (hasFlash == true){
+  console.log('here');
+  $("td.copy").addClass("hasFlash");
+}else {
+  $("td.copy").addClass("noFlash");
+}
+}
+
+// Flash sniffer (checks if flash is enabled, copy to clipboard requires flash)
+function isFlashEnabled()
+{
+    var hasFlash = false;
+    try
+    {
+        var fo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash');
+        if(fo) hasFlash = true;
+    }
+    catch(e)
+    {
+        if(navigator.mimeTypes ["application/x-shockwave-flash"] != undefined) hasFlash = true;
+    }
+    return hasFlash;
 }

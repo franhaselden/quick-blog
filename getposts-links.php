@@ -24,18 +24,22 @@
     }
     $masterpostlist = $new;
     usort($masterpostlist, "sortFunction");
-    $rowcounter = 0;
+    $counter = 0;
     echo "<table class='allpostlinks' border='0'><tbody>";
     foreach ($masterpostlist as $post){ // One iteration per row
 
         // Build link
         $link = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] . "/posts/post-" . $post['filepath'] . ".html";
         $link = str_replace("/getposts-links.php","",$link);
-
+        $counter++;
         echo '<tr>';
         echo "<td><p>" . $post['title'] . "</p></td>";
-        echo "<td class='postlink'><span><textarea>".$link."</textarea></span></td>";
-        echo "<td class='copy'><i class='fa fa-copy'> Copy link</td>";
+
+        echo "<td class='postlink'><textarea id='textarea-'".$counter."'>".$link."</textarea><span></span></td>";
+
+        $copylink = '<td class="copy"><p id="copy-'.$counter.'" onclick="copyLink(\'textarea-'.$counter.'\',\'copy-'.$counter.'\')"><i class="fa fa-link"></i> Copy link</p></td>';
+        echo $copylink;
+
 
         echo '</tr>';
     }
