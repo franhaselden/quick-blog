@@ -3,7 +3,8 @@
 // Gets fields
 $title = $_POST["postitle"];
 $date = htmlspecialchars($_POST["publishdate"]);
-$content = htmlspecialchars($_POST["postcontent"]);
+$content = $_POST["postcontent"];
+$content = addslashes($content);
 
 // Generates the post HTML file
 $postHTML = '<h2 class="post-title">'. $title .'</h2>
@@ -22,7 +23,6 @@ file_put_contents($postfilename, $postHTML);
 
 // Adds the title and link to the masterpost file (list of all posts)
 $masterpostEntry = $date . "~" . $title . "~" . $filetitle;
-echo $masterpostEntry;
 $file = "../posts/master-allposts.txt";
 $current = file_get_contents($file);
 $current .= $masterpostEntry . "^";
@@ -34,6 +34,6 @@ function clean($string) {
    return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
 };
 
-//header('Location: ../admin.php');
+header('Location: ../admin.php');
 
 ?>
