@@ -2,6 +2,10 @@
 // Gets and outputs the posts in a table on the admin page
 $masterposts = "posts/master-allposts.txt";
 $current = file_get_contents($masterposts);
+if ($current == ""){
+    echo "No posts to display";
+}else{
+
 $current = rtrim($current, "^");
 $masterpostlist = explode('^', $current);
 foreach ($masterpostlist as &$post){
@@ -17,7 +21,6 @@ foreach ($masterpostlist as $inner) {
 }
 $masterpostlist = $new;
 usort($masterpostlist, "sortFunction");
-$rowcounter = 0;
 echo "<table border='0'><tbody>";
 foreach ($masterpostlist as $post){ // One iteration per row
     echo '<tr>'; // Row STARTS here.
@@ -29,8 +32,8 @@ foreach ($masterpostlist as $post){ // One iteration per row
     echo '</tr>'; // Row ENDS here.
 }
 echo "</tbody></table>";
-
-function sortFunction( $a, $b ) {
-    return strtotime($a["date"]) - strtotime($b["date"]);
 }
+function sortFunction( $a, $b ) {
+        return strtotime($b["date"]) - strtotime($a["date"]);
+    }
 ?>

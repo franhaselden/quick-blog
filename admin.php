@@ -7,6 +7,7 @@
 					<a id="image-upload" onclick="loadpage('image-upload','pageload')"><i class="fa fa-photo"></i>Add to picture library</a><br />
           <a id="image-library" onclick="loadpage('image-library','pageload')"><i class="fa fa-paint-brush"></i>See picture library</a><br />
 					<a id="tags" onclick="loadpage('tags','pageload')"><i class="fa fa-tags"></i>Create new post tags</a><br />
+					<a id="sitesettings" onclick="loadpage('sitesettings','pageload')"><i class="fa fa-cog"></i>Edit site settings</a><br />
 					<a href="index.php"><i class="fa fa-home"></i>See your blog</a><br />
 		</aside>
 		<section>

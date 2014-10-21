@@ -1,7 +1,7 @@
 <?php
 
 // Gets fields
-$title = htmlspecialchars($_POST["postitle"]);
+$title = $_POST["postitle"];
 $date = htmlspecialchars($_POST["publishdate"]);
 $content = htmlspecialchars($_POST["postcontent"]);
 
@@ -10,11 +10,9 @@ $postHTML = '<h2 class="post-title">'. $title .'</h2>
 			<h3 class="publish-date">'. $date .'</h3>
 			<p class="content">'. $content .'</p>';
 
+
 // Tidies up title
-str_replace('"',"",$title);
-str_replace("'","",$title);
-str_replace("<","",$title);
-str_replace(">","",$title);
+$title = preg_replace("~'|<|>|:~", "",$title);
 
 // Makes the title a suitable filename 
 $filetitle = clean($title);
