@@ -22,16 +22,15 @@
 				$postarray = $new;
 				usort($postarray, "sortFunction");
 				foreach ($postarray as $innerarray) {
-
 					$pathname = "posts/post-" . $innerarray['filepath'] . ".html";
 					$postExcerpt = getTheExcerpt($pathname);
 					$postTitle = getTheTitle($pathname);
 					$postDate = getTheDate($pathname);
-
 					echo "<article class='post'>";
 					echo "<h2 class='post-title'>" . $postTitle . "</p>";
 					echo "<h3 class='publish-date'>" . $postDate . "</h3>";
 					echo "<p class='content'>" . $postExcerpt . "</p>";
+					echo "<p><a onclick='loadPage(arg1,arg2)' class='readmore'>Read more</a></p>";
 					echo "</article>";
 				}
 				?>

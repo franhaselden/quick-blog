@@ -90,3 +90,8 @@ $("#back").fadeIn("fast");
 $("#" + filename).addClass("selected");
 
 }
+
+// This function handles loading of posts in the INDEX section, so what the visitor sees
+function loadPost(filepath,section){
+
+}
