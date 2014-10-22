@@ -1,6 +1,6 @@
 #BlogCube
 ## A super lightweight text-based blog system
-## THIS IS A WORK IN PROGRESS, PLEASE DON'T DOWNLOAD THIS YET - IT WON'T WORK!
+### This is a work in progress - though the simple structure of the blog should work, extra features like direct linking and image uploads don't currently work fully. Feel free to have a play with it though.
 
 BlogCube uses very lightweight code to create a super-simple no-database blogging system. It uses HTML5, PHP, jQuery and AJAX
 
@@ -13,6 +13,8 @@ Included is everything you need to get blogging. Just follow the guide below and
 BlogCube comes with a basic but nice-looking theme so you can use the blog instantly. Just plug in your own CSS if you fancy it.
 
 ###What does it use?
-BlogCube uses HTML5, and therefore may not work on older browsers
+BlogCube uses HTML5, and therefore may not work on older browsers, it's meant to be a bit experimental and make the most of top-technologies.
+
 It also uses jQuery 2.1.1, AJAX for loading in the content, and PHP. You'll need PHP 5+ running on your server for this to work.
+
 BlogCube uses FontAwesome to handle all the icons for the site quickly and easily. Thanks a bunch FontAwesome for your opensource iconset!
