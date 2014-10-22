@@ -1,10 +1,8 @@
 <form action="functions/savesettings.php" method="POST">
 <?php
 // Gets settings and autofills
-$title = "settings/settings-sitename.html";
-$title = file_get_contents($title);
-$sub = "settings/settings-sitesub.html";
-$sub = file_get_contents($sub);
+$title = "settings/settings-sitename.html";$title = file_get_contents($title);
+$sub = "settings/settings-sitesub.html";$sub = file_get_contents($sub);
 ?>
 <article>
 	<h3 class="admintitle">Site settings</h3>

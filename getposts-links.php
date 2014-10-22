@@ -1,7 +1,7 @@
 <article id="postlist">
     <h3 class="admintitle">Get Post Links</h3>
-
     <?php
+    require 'functions/sitefunctions.php';
     // Gets and outputs the posts in a table on the admin page
     $masterposts = "posts/master-allposts.txt";
     $current = file_get_contents($masterposts);
@@ -39,10 +39,6 @@
     }
     echo "</tbody></table>";
     }  
-
-    function sortFunction( $a, $b ) {
-        return strtotime($b["date"]) - strtotime($a["date"]);
-    }
     ?>
    
 </article>
