@@ -1,24 +1,5 @@
 <?php
 
-// This function is used to scan the directory and return the posts in an array called $posts
-// Call it whenever you need to get all the post data
-function postArray(){
-	// Scans the "posts" directory
-	$dir    = 'posts';
-	// Brings back an array of all files found there
-	$files = scandir($dir);
-	// Filters out the array to only include files that begin with "post-"
-	$posts = array_filter(
-	    $files,
-	    function($value) {
-	        return (strpos($value, 'post-') === 0);
-	    }
-	);
-	// Returns the array
-	return $posts;
-	}
-
-
 // This function is used to sort by date order - newest to oldest.
 // If you want to sort oldest - newest, swap a and b around in the function
 function sortFunction( $a, $b ) {
@@ -50,9 +31,9 @@ function getTheTitle($post){
 function getTheDate($post){
 	$postfile = file_get_contents($post);
 	$postDate = getBetween('<h3 class="publish-date">',"</h3>",$postfile);
-	$originalDate = $postDate;
-	$newDate = date('d F Y', strtotime($originalDate));
-	return $newDate;
+	//$originalDate = $postDate;
+	//$newDate = date('d F Y', strtotime($originalDate));
+	return $postDate;
 }
 
 // This function is used to get a string between two delimiters (e.g content between <tags>)
@@ -94,6 +75,5 @@ function masterPostExplode($current){
 	$masterpostlist = explode('^', $current);
 	return $masterpostlist;
 }
-
 
 ?>
