@@ -40,5 +40,4 @@
     echo "</tbody></table>";
     }  
     ?>
-   
 </article>

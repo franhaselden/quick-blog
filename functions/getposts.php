@@ -1,13 +1,11 @@
 <?php
 require 'sitefunctions.php';
 // Gets and outputs the posts in a table on the admin page
-$masterposts = "posts/master-allposts.txt";
-$current = file_get_contents($masterposts);
+$current = getMasterPostList();
 if ($current == ""){
     echo "No posts to display";
 }else{
-    $current = rtrim($current, "^");
-$masterpostlist = explode('^', $current);
+$masterpostlist = masterPostExplode($current);
 foreach ($masterpostlist as &$post){
     $post = explode('~',$post);
 }

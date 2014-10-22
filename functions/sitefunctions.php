@@ -32,4 +32,68 @@ function makePathName($string) {
    $string = strtolower($string);
    return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
 };
+
+// This function grabs the post array (through postArray() function) and outputs an excerpt of all posts
+function getTheExcerpt($post){
+	$postfile = file_get_contents($post);
+	$fullpost = getBetween('<div class="content">',"&nbsp;</div>",$postfile);
+	$postExcerpt = trimText($fullpost,750);
+	return $postExcerpt;
+}
+
+function getTheTitle($post){
+	$postfile = file_get_contents($post);
+	$postTitle = getBetween('<h2 class="post-title">',"</h2>",$postfile);
+	return $postTitle;
+}
+
+function getTheDate($post){
+	$postfile = file_get_contents($post);
+	$postDate = getBetween('<h3 class="publish-date">',"</h3>",$postfile);
+	$originalDate = $postDate;
+	$newDate = date('d F Y', strtotime($originalDate));
+	return $newDate;
+}
+
+// This function is used to get a string between two delimiters (e.g content between <tags>)
+function getBetween($var1="",$var2="",$pool){
+	$temp1 = strpos($pool,$var1)+strlen($var1);
+	$result = substr($pool,$temp1,strlen($pool));
+	$dd=strpos($result,$var2);
+	if($dd == 0){
+	$dd = strlen($result);
+	}
+	return substr($result,0,$dd);
+	}
+
+// This function trims text to the nearest word, just pass it the string and your defined length
+function trimText($input, $length) {
+    // If the text is already shorter than the max length, then just return unedited text.
+    if (strlen($input) <= $length) {
+        return $input;
+    }
+    // Find the last space (between words we're assuming) after the max length.
+    $last_space = strrpos(substr($input, 0, $length), ' ');
+    // Trim
+    $trimmedText = substr($input, 0, $last_space);
+    // Add ellipsis.
+    $trimmedText .= '...';
+    return $trimmedText;
+}
+
+// This function opens the master post file and gets all the contents
+function getMasterpostList(){
+	$masterposts = "posts/master-allposts.txt";
+	$current = file_get_contents($masterposts);
+	return $current;
+}
+
+// This function "explodes" the master post list using the delimiter '^' to get each individual part in an array 
+function masterPostExplode($current){
+	$current = rtrim($current, "^");
+	$masterpostlist = explode('^', $current);
+	return $masterpostlist;
+}
+
+
 ?>
