@@ -21,18 +21,18 @@
 				}
 				$postarray = $new;
 				usort($postarray, "sortFunction");
-				$postcounter = 0;
+				$counter = 0;
 				foreach ($postarray as $innerarray) {
-					$postcounter++;
+					$counter++;
 					$pathname = "posts/post-" . $innerarray['filepath'] . ".html";
 					$postExcerpt = getTheExcerpt($pathname);
 					$postTitle = getTheTitle($pathname);
 					$postDate = getTheDate($pathname);
-					echo "<article class='post' id='post-".$postcounter."'>";
+					echo "<article class='post' id='post-".$counter."'>";
 					echo "<h2 class='post-title'>" . $postTitle . "</p>";
 					echo "<h3 class='publish-date'>" . $postDate . "</h3>";
 					echo "<p class='content'>" . $postExcerpt . "</p>";
-					echo '<p><a onclick="loadPost(\''.$pathname.'\',\'post-'.$postcounter.'\')" class="readmore">Read more</a></p>';
+					echo '<p><a onclick="loadPost(\''.$pathname.'\',\'post-'.$counter.'\')" class="readmore">Read more</a></p>';
 					echo "</article>";
 				}
 				?>

@@ -122,6 +122,8 @@ body{background-color:#f2f2f2}
 	cursor:pointer;
 }
 
+.admin form input#feature{font-size: 12px;}
+
 /* Form for uploader */
 .admin form.uploader{color:#ccc;border:2px dashed #ccc;height:340px;text-align: center;position:relative;}
 .admin form.uploader i.background{

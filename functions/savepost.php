@@ -6,6 +6,10 @@ $date = htmlspecialchars($_POST["publishdate"]);
 $content = $_POST["postcontent"];
 $content = addslashes($content);
 $date = prettyDate($date);
+$uploads_dir = "../images/";
+$tmp_name = $_FILES["feature"]["tmp_name"]; //The temporary file
+$name = $_FILES["feature"]["name"]; // It's name
+move_uploaded_file($tmp_name, "$uploads_dir/$name"); //Put it there
 
 // Generates the post HTML file
 $postHTML = '<h2 class="post-title">'. $title .'</h2>

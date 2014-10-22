@@ -19,6 +19,7 @@ function getTheExcerpt($post){
 	$postfile = file_get_contents($post);
 	$fullpost = getBetween('<div class="content">',"&nbsp;</div>",$postfile);
 	$postExcerpt = trimText($fullpost,750);
+	$postExcerpt = stripslashes($postExcerpt);
 	return $postExcerpt;
 }
 
