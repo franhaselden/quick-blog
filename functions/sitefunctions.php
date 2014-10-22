@@ -31,6 +31,12 @@ function getTheTitle($post){
 function getTheDate($post){
 	$postfile = file_get_contents($post);
 	$postDate = getBetween('<h3 class="publish-date">',"</h3>",$postfile);
+	$newDate = prettyDate($postDate);
+	return $newDate;
+}
+
+// This function takes an ISO6018 date and converts it to "pretty" Date Month Year
+function prettyDate($postDate){
 	$originalDate = $postDate;
 	$newDate = date('d F Y', strtotime($originalDate));
 	return $newDate;

@@ -5,6 +5,7 @@ $title = $_POST["postitle"];
 $date = htmlspecialchars($_POST["publishdate"]);
 $content = $_POST["postcontent"];
 $content = addslashes($content);
+$date = prettyDate($date);
 
 // Generates the post HTML file
 $postHTML = '<h2 class="post-title">'. $title .'</h2>
